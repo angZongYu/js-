@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="a1" id="a1">
+        <p>l一枝红杏出墙来</p>
+    </div>
+</body>
+<style>
+    .a1{
+        width: 300px;
+        height: 300px;
+        background-color: rgb(36, 35, 35);
+        color: #fff;
+    }
+    .a2{
+        width: 300px;
+        height: 300px;
+        padding: 20px;
+        background-color: rgb(216, 34, 34);
+        color: rgb(85, 48, 170);
+
+    }
+    
+
+</style>
+<script>
+    var a1= document.getElementById('a1')
+    a1.onmouseover=function(){
+        a1.className='a2'
+    }
+    a1.onmouseout=function(){
+        a1.className='a1'
+        
+    }
+</script>
+</html>

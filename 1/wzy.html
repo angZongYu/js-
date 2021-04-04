@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>变宽</button>
+    <button>变高</button>
+    <button>变色</button>
+    <button>隐藏</button>
+    <button>重置</button>
+    <div id="box"></div>
+</body>
+<script>
+    function fu(a,b,c){
+        a.style[b]=c
+    }
+        var box=document.getElementById('box')
+        var but=document.getElementsByTagName('button')
+        var k=['width','height','background','display','display']
+        var ka=['200px','200px','red','none','block']
+        for(var i=0;i <but.length;i++){ 
+            but[i].index=i;
+            
+            but[i].onclick=function(){
+                
+                if(this.index==but.length-1){
+                    box.style.cssText=""
+                }
+                fu(box,k[this.index],ka[this.index])
+            }
+            
+
+        }
+</script>
+<style>
+    body{
+        width: 500px;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        
+    }
+    #box{
+        width: 100px;
+        height: 100px;background-color: rgb(19, 17, 17);
+    }
+</style>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <button>点击改变DIV颜色</button>
+    </p>
+  
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+<script>
+    var div=document.getElementsByTagName('div')
+    var btn=document.getElementsByTagName('button')[0]
+    btn.onclick=function(){
+        for(var i=0;i<div.length;i++){
+            div[i].style.background="red"
+        }
+    }
+</script>
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        float: left;
+        background-color: rgb(22, 21, 21);
+        margin: 10px;
+    }
+</style>
+</html>
